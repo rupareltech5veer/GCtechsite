@@ -1,0 +1,300 @@
+body{
+    /*background-color: black;*/
+    background-image: url("img/spaceBlack.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    color: #ffffff;
+    margin: 0;
+    left: 0;
+    /* height: 100vh;
+    width: 100vw; */
+}   
+.menu{
+    display: inline-block;
+    padding: 0px 0px 20px 30px;
+    z-index: 9;
+}
+.head1{
+    text-align: center;
+    font-family: 'Bungee Outline', cursive;
+    font-size: 30px;
+    margin: -50px;
+}
+#title{
+    stroke: rgb(255, 0, 0);
+    stroke-width: 40px;
+}
+#details,#moredetails{
+    text-align: middle;
+    vertical-align: middle;
+    font-size: 60px;
+}
+.middle{
+    border: rgb(255, 215, 0) 4px dashed;
+    background-color: rgb(255, 0, 0, 0.4);  
+    text-align: center;
+    height: 1000px; 
+    position: relative;
+    margin: 20px 10px 0 10px;
+}
+.bottom{
+    margin-top: 20px;
+    border: rgb(255, 215, 0) 4px dashed;
+    background-color: rgb(255, 0, 0, 0.4);
+    text-align: center;
+    height: 1000px;
+    position: relative;
+    margin: 20px 10px 0 10px;
+}
+#nav-icon{
+    width: 75px;
+    height: 75px;
+    transition-duration: 0.4s;
+    transition-property: transform;
+}
+nav{
+    margin-top: -75px;
+    margin-left: 90px;
+    display: grid;
+    font-size: 30px;
+    background-color: transparent;
+    border: black;
+    text-decoration: none;
+}
+.nav-options {
+    display: none;
+}
+.menu:hover .nav-options {
+    display: block;
+}
+.menu:hover #nav-icon{
+    transform: rotate(360deg);
+}
+#homePage{
+    border-radius: 10px;
+    width: 422.5px;
+    padding: 10px;
+    padding-left: 30px;
+    animation: logoShow 1s;
+    animation-fill-mode: forwards;
+}
+#featuredPage{
+    border-radius: 10px;
+    width: 390px;
+    padding: 10px;
+    padding-left: 30px;
+    animation: logoShow 1s;
+    animation-fill-mode: forwards;
+}
+#projectPage{
+    border-radius: 10px;
+    width: 357.5px;
+    padding: 10px;
+    padding-left: 30px;
+    animation: logoShow 1s;
+    animation-fill-mode: forwards;
+}
+#aboutPage{
+    border-radius: 10px;
+    width: 325px;
+    padding: 10px;
+    padding-left: 30px;
+    animation: logoShow 1s;
+    animation-fill-mode: forwards;
+}
+#homePage:hover, #featuredPage:hover, #projectPage:hover, #aboutPage:hover{
+    width: 455px;
+    font-weight: bold;
+}
+.nav-options > nav > a{
+    color: white;
+    font-family: sans-serif;
+    border: solid black 5px;
+}
+.intro{
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.blankDivIntro{
+    width: 100%;
+    height: 200%;
+    background-color: black;
+}
+#txt12Wrapper{
+    display: grid;
+    grid-template-columns: auto auto;
+    position: relative;
+    font-size: 60px;
+    width: 100%;
+    height: fit-content;
+    top: 25vh;
+}
+#txt2Wrapper{
+    grid-row: 1;
+    grid-column: 2;
+    overflow: hidden;
+    width: 100%;
+    height: fit-content;
+    text-align: left;
+    position: relative;
+}
+#txt1Wrapper{
+    grid-row: 1;
+    grid-column: 1;
+    overflow: hidden;
+    width: 100%;
+    height: fit-content;
+    text-align: right;
+    position: relative;
+}
+#txt1Hider{
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: txt1Ani 4s ease-in-out 1s normal forwards;
+    z-index: 10;
+}
+#txt2Hider{
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: txt2Ani 2.5s ease 1s normal forwards;
+    z-index: 10;
+}
+#txt1, #txt2{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-image: repeating-linear-gradient(to right, red, darkgoldenrod, white, darkgoldenrod, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: introHeadColorChange 5s linear alternate-reverse infinite;
+}
+#txt34Wrapper{
+    font-size: 20px;
+    text-align: left;
+    height: auto;
+    width: 100%;
+    background-color: black;
+    position: relative;
+    top: 20vh;
+}
+#txt3{
+    margin-left: -5000px;
+    animation: leftIn 0.5s ease-in-out 2.5s normal forwards;
+    margin-top: 0;
+    position: absolute;
+    width: 100vw;
+    left: 41vw;
+}
+#txt4{
+    animation: rightIn 0.5s ease-in-out 3s normal forwards;
+    position: relative;
+    width: 100vw;
+    left: 500vw;
+}
+#btnWrapper{
+    position: relative;
+    top: 30vh;
+}
+#btnScrollDown{
+    opacity: 0%;
+    animation: btnAppearMove 1s linear 6s alternate infinite;
+    border: none;
+    background-color: transparent;
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+    /* animation-play-state: running, running, running, running, running, running, running, running; */
+}
+#triBtn{
+    color: blue;
+    font-size: 50px;
+    transform: rotate(180deg);
+}
+#triBtn:hover{
+    /* filter: drop-shadow(10px 0px 5px darkblue); */
+    /* filter: drop-shadow(0 0mm 10mm rgb(0, 0, 100)); */
+    outline: 10px solid rgba(0,100,0,0.7);
+    outline-style: double;
+    border-radius: 25px;
+    padding: 5px;
+    /* animation-play-state: running, running, running, running, running, running, running, paused; */
+    transition: padding 0.5s, outline-style 0.5s, outline 0.5s;
+    cursor: grab;
+}
+#btnScrollDown:hover{
+    animation-play-state: paused;
+}
+/*Animations*/
+
+@keyframes logoShow {
+    from {width: 0px;}
+}
+@keyframes logoExit {
+    to {width: 0px;}
+}
+
+@keyframes txt1Ani {
+    from {
+        height: 100%;
+    }
+    to {
+        height: 0%;
+        margin-top: 500px;
+    }
+    
+}
+@keyframes txt2Ani {
+    from {
+        height: 100%;
+    }
+    to {
+        height: 0%;
+    }
+    
+}
+@keyframes leftIn {
+    to{
+        margin-left: 0px;   
+    } 
+}
+@keyframes rightIn {
+    to{
+        left: 50vw;   
+    } 
+}
+/* @keyframes btnAppear {
+    from{
+        display: block;
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+    
+} */
+@keyframes btnAppearMove {
+    100%{
+        opacity: 100%;
+        filter: brightness(4);
+        margin-top: 50px;
+    }
+}
+@keyframes introHeadColorChange {
+    100%{
+        background-position: 1000000%;
+    }
+}
